@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipeRefreshLayout"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleSmallTitle"
+        android:progress="20"
+        android:visibility="visible"/>
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webviewid"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativelayout">
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:src="@drawable/no_internet"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/noconnection_logo"
+            android:layout_marginTop="6dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Internet Connection"
+            android:layout_below="@+id/noconnection_logo"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:id="@+id/txtnoconnection"/>
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="55dp"
+            android:text="Retry"
+            android:background="@color/purple_200"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            android:layout_below="@id/txtnoconnection"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:id="@+id/btnNoconnection"/>
+
+
+
+
+
+
+    </RelativeLayout>
+</LinearLayout>
+
