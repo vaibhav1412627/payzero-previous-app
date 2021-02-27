@@ -47,9 +47,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        AppUpdateChecker appUpdateChecker=new AppUpdateChecker(this);  //pass the activity in constructure
-        appUpdateChecker.checkForUpdate(false); //mannual check false here
+        String currentVersion;
+    try {
+        currentVersion = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+    } catch (PackageManager.NameNotFoundException e) {
+        e.printStackTrace();
+    }
 
+    new GetVersionCode().execute();
 
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
